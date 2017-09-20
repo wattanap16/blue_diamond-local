@@ -13,7 +13,10 @@ var routes = require('./routes/index');
 var app = express();
 
 
-mongoose.connect('localhost:27017/shopping');
+//mongoose.connect('localhost:27017/shopping');
+
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/shopping',{useMongoClient: true});
 
 
 
