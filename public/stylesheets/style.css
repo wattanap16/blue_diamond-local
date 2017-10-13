@@ -20,7 +20,12 @@
 }
 
 h1 {
-    color: #ccc;
+    color: #5D95E6;
+    font-weight: 300;
+}
+
+h4 {
+    color: #000000 important;
     font-weight: 300;
 }
 
@@ -29,7 +34,7 @@ figure{
 }
 
 .content article {
-    padding: 50px 0 0 0;
+    padding: 30px 0 0 0;
     max-width: 640px;
     margin: 0px auto;
     text-align: center;
@@ -39,9 +44,9 @@ img {
     max-width: 100%;
 }
 
-/* ----under this line is for Parallex  ----- */
+/* ----under this line is for Parallax BG ----- */
 
-.bird-box {
+.diamond-box {
     position: relative;
     height: 600px;
     background-image: url("../images/diamond-bg.jpg");
@@ -63,7 +68,7 @@ img {
     margin-top: -50px;
 }
 
-.fore-bird {
+.fore-diamond {
     width: 1000px;
     height: 850px;
     background-image: url("../images/blue-diamond.png");
@@ -75,7 +80,7 @@ img {
   
 }
 
-.back-bird {
+.back-diamond {
     width: 600px;
     height: 600px;
     background-image: url("../images/light.png");
@@ -84,4 +89,46 @@ img {
     position: absolute;
     margin-top: -120px;
     
+}
+
+/* ---- Footer ----*/
+
+.footer {
+    position: relative;
+    height: 500px;
+    background-image: url("../images/footer.jpg");
+    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    overflow: hidden; 
+}
+
+.blog-posts {
+    margin-top: 100px;
+    
+}
+
+.blog-posts .post {
+    border: 0px solid #0C0000;
+    padding: 20px 20px 0;
+    position: relative;
+    background-color: #F1ECE6;
+     
+}
+
+
+
+.blog-posts .post-1 {
+    transform: translate(100px, 20px);
+}
+
+.blog-posts .post-2 {
+    z-index: 2;
+    
+}
+
+.blog-posts .post-3 {
+    transform: translate(-100px, 20px);
 }

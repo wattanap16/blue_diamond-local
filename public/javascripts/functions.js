@@ -1,18 +1,33 @@
 
+/* ---- function for Parallax ---- */
+
 $(window).scroll(function() {
    var wScroll = $(this).scrollTop();
 console.log(wScroll);
 
+/* ---- for header parallax ----*/
    $('.logo').css({
        'transform' :'translate(0px, ' + wScroll / 2 + '%)'
    });
 
-   $('.back-bird').css({
-    'transform' :'translate(0px, ' + wScroll / 7 + '%)'
+   $('.back-diamond').css({
+    'transform' :'translate(' + wScroll / 6 + '%, ' + wScroll / 7 + '%)'
    });
 
-   $('.fore-bird').css({
-    'transform' :'translate(0px, -' + wScroll / 17 + '%)'
+   $('.fore-diamond').css({
+    'transform' :'translate(-' + wScroll / 20 + '%, -' + wScroll / 17 + '%)'
    });
+
+/* ---- for footer moving ----*/
+   if(wScroll > $('.blog-posts').offset().top - $(window).height()) {
+  
+       var offset = Math.min(0, wScroll - 
+                   $('.blog-posts').offset().top + $(window).height() - 350);
+
+       $('.post-1').css({'transform': 'translate('+ offset +'px, '+ Math.abs(offset * 0.2) +'px)'}); 
+    
+       $('.post-3').css({'transform': 'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.2) +'px)'});                
+
+       }
 
 });
