@@ -1,4 +1,11 @@
 
+.navbar {
+    background-color: #E6F1F8;
+}
+
+.thumbnail {
+    border: 1px solid #E6F1F8;
+}
 
 .thumbnail img {
     max-height: 150px;
@@ -11,6 +18,11 @@
 .price {
     font-size: 16px;
     font-weight: bold;
+    color: lightseagreen;
+}
+
+.title {
+    color: #188FB1;
 }
 
 /* ---- under this line is for parallex ---- */
@@ -106,16 +118,16 @@ img {
 }
 
 .blog-posts {
-    margin-top: 100px;
+    margin-top: 40px;
     
 }
 
 .blog-posts .post {
     border: 0px solid #0C0000;
-    padding: 20px 20px 0;
+    padding: 5px 25px 0;
     position: relative;
     background-color: #F1ECE6;
-     
+    opacity: 0.5; 
 }
 
 

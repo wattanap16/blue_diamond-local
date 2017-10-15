@@ -38,7 +38,7 @@ router.get('/add-to-cart/:id', function(req, res, next) {
        cart.add(product, product.id);
        req.session.cart = cart;
        console.log(req.session.cart);
-       res.redirect('/');
+       res.redirect('/#headerPosition');
   });
 });
 
@@ -49,7 +49,7 @@ router.get('/reduce/:id', function(req, res, next) {
 
     cart.reduceByOne(productId);
     req.session.cart = cart;
-    res.redirect('/shopping-cart');
+    res.redirect('/shopping-cart/#headerPosition');
 });
 
 router.get('/remove/:id', function(req, res, next) {
@@ -58,7 +58,7 @@ router.get('/remove/:id', function(req, res, next) {
 
     cart.removeItem(productId);
     req.session.cart = cart;
-    res.redirect('/shopping-cart');
+    res.redirect('/shopping-cart/#headerPosition');
 });
 
 
@@ -74,7 +74,7 @@ router.get('/shopping-cart', function(req, res, next) {
 
 router.get('/checkout', isLoggedIn, function(req, res, next) {
       if (!req.session.cart) {
-            return res.redirect('/shopping-cart');
+            return res.redirect('/shopping-cart/#headerPosition');
       }
       var cart = new Cart(req.session.cart);
       var errMsg = req.flash('error')[0];
@@ -83,7 +83,7 @@ router.get('/checkout', isLoggedIn, function(req, res, next) {
 
 router.post('/checkout', isLoggedIn, function(req, res, next) {
   if (!req.session.cart) {
-      return res.redirect('/shopping-cart');
+      return res.redirect('/shopping-cart/#headerPosition');
   }
   var cart = new Cart(req.session.cart);
   
@@ -97,7 +97,7 @@ router.post('/checkout', isLoggedIn, function(req, res, next) {
   }, function(err, charge) {
       if (err) {
           req.flash('error', err.message);
-          return res.redirect('/checkout');
+          return res.redirect('/checkout/#headerPosition');
       }
       var order = new Order({
           user: req.user,
@@ -109,7 +109,7 @@ router.post('/checkout', isLoggedIn, function(req, res, next) {
       order.save(function(err, result) {
           req.flash('success', 'Successfully TEST-Bought Product!');
           req.session.cart = null;
-          res.redirect('/');
+          res.redirect('/#headerPosition');
       });
   }); 
 });
@@ -121,5 +121,5 @@ function isLoggedIn(req, res, next) {
         return next();
     }
     req.session.oldUrl = req.url;
-    res.redirect('/user/signin');
+    res.redirect('/user/signin/#headerPosition');
 }
