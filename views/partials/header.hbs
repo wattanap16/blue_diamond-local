@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/#headerPosition">Fairy-Brand</a>
+      <a class="navbar-brand" href="/">Fairy-Brand</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,7 +17,7 @@
       
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="/shopping-cart/#headerPosition">
+          <a href="/shopping-cart">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart
             <span class="badge">{{session.cart.totalQty}}</span>
           </a>
@@ -28,13 +28,13 @@
              <i class="fa fa-user" aria-hidden="true"></i> User Management <span class="caret"></span></a>
           <ul class="dropdown-menu">
             {{# if login}}
-               <li><a href="/user/profile/#headerPosition"> User Account <i class="fa fa-user-secret" aria-hidden="true"></i></a></li>
+               <li><a href="/user/profile"> User Account <i class="fa fa-user-secret" aria-hidden="true"></i></a></li>
             
                <li role="separator" class="divider"></li>
-               <li><a href="/user/logout/#headerPosition">LogOut <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+               <li><a href="/user/logout">LogOut <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
             {{ else }}
-               <li><a href="/user/signup/#headerPosition">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
-               <li><a href="/user/signin/#headerPosition">Sign In <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+               <li><a href="/user/signup">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+               <li><a href="/user/signin">Sign In <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
             {{/if}}
             
           </ul>

@@ -27,7 +27,7 @@ router.get('/profile', isLoggedIn, function(req, res, next) {
 
  router.get('/logout', isLoggedIn, function(req, res, next) {
     req.logout();
-    res.redirect('/#headerPosition');
+    res.redirect('/');
 });
     
 
@@ -53,7 +53,7 @@ router.post('/signup', passport.authenticate('local.signup', {
         req.session.oldUrl = null;
         res.redirect(oldUrl);
     } else {
-        res.redirect('/user/profile/#headerPosition');
+        res.redirect('/user/profile');
     }
 });
 
@@ -76,7 +76,7 @@ router.post('/signin', passport.authenticate('local.signin', {
         req.session.oldUrl = null;
         res.redirect(oldUrl);
       } else {
-          res.redirect('/user/profile/#headerPosition');
+          res.redirect('/user/profile');
       }
 });
 
@@ -91,12 +91,12 @@ function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
     }
-    res.redirect('/#headerPosition');
+    res.redirect('/');
 }
 
 function notLoggedIn(req, res, next) {
     if (!req.isAuthenticated()) {
         return next();
     }
-    res.redirect('/#headerPosition');
+    res.redirect('/');
 }
