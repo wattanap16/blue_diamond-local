@@ -5,10 +5,15 @@
 
 .thumbnail {
     border: 1px solid #E6F1F8;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.2s ease-in-out;
+    
 }
 
 .thumbnail img {
     max-height: 150px;
+    
 }
 
 .thumbnail .description {
@@ -144,3 +149,37 @@ img {
 .blog-posts .post-3 {
     transform: translate(-100px, 20px);
 }
+
+/* ---- for Products moving ---- */
+
+.is-showing {
+    opacity: 1;
+    transform: translateX(0px);
+    
+}
+
+/* ---- Pic ZooM ---- */
+
+.img-responsive:hover {
+    transform: scale(1.2);
+}
+
+.price:hover {
+    color: #EE9DDA;
+    transform: scale(1.2);
+}
+
+/* ---- large-window ----*/
+
+.large-window {
+    
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 50%;
+    background-image: url("../images/dw2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+

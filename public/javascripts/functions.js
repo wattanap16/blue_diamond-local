@@ -30,4 +30,17 @@ console.log(wScroll);
 
        }
 
+/* ---- for Products moving ---- */
+    if(wScroll > $('.thumbnail').offset().top - ($(window).height()/1.1)) {
+        $('.thumbnail').each(function(i) {
+            setTimeout(function(){
+              $('.thumbnail').eq(i).addClass('is-showing');
+            }, 150 * (i+1));
+        });
+    }
+
+
 });
+
+
+
