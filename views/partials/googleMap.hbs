@@ -1,15 +1,48 @@
 
 <style>
+.googlemap {
+  background-image: url("../images/ggMap/ggMapBg.jpg");
+  width: 100%;
+  height: 350px;
+
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
+  overflow: hidden; 
+}
+
  #map {
    width: 100%;
    height: 300px;
    background-color: lightskyblue;
  }
+
+ footer {
+        position: relative;
+        height: 50px;
+        width: 100%;
+ }
+
+  p.copyright {
+        position: absolute;
+        width: 100%;
+        color: #fff;
+        line-height: 20px;
+        font-size: 0.7em;
+        text-align: center;
+        bottom:15%;
+    }
+
 </style>
 
 <section class="googlemap"  >
 
      <div id="map" ></div>
+     <footer>
+        <p class="copyright">&copy bank wattanap 2017 All Rights Reserved ©</p>
+     </footer>
+
+
     <script>
       function initMap() {
         var liverpool = {lat: 53.41058 , lng: -2.97794};

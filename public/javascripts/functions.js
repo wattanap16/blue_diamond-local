@@ -85,7 +85,8 @@ if(wScroll > $('.blog-display3s').offset().top - $(window).height()) {
          $('.display3-3').css({'transform': 
          'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.2) +'px)'});                
   
-         }         
+         }  
+         
 
 });
 
