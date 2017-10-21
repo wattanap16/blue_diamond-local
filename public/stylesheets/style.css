@@ -54,8 +54,8 @@ figure{
 }
 
 .content article {
-    padding: 30px 0 0 0;
-    max-width: 640px;
+    padding: 30px 5px 0 5px;
+    max-width: 700px;
     margin: 0px auto;
     text-align: center;
 }
@@ -343,6 +343,7 @@ img {
     background-image: url("../images/display-3/b1.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    background-color: transparent;
 }
 
 .blog-display3s .display3-3 {
