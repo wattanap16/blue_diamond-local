@@ -46,19 +46,7 @@ if(wScroll > $('.thumbnail').offset().top - ($(window).height()/1.1)) {
 
 
 /* ---- for disPlay2 moving ----*/
-/*if(wScroll > $('.blog-display2s').offset().top - $(window).height()) {
-    
-         var offset = Math.min(0, wScroll - 
-                     $('.blog-display2s').offset().top + $(window).height() - 350);
-  
-         $('.display2-1').css({'transform':
-          'translate('+ offset +'px, '+ Math.abs(offset * 0.2) +'px)'}); 
-      
-         $('.display2-3').css({'transform': 
-         'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.2) +'px)'});                
-  
-         }
-*/
+
          if(wScroll > $('.blog-display2s').offset().top - $(window).height()) {
             
                  var offset = Math.min(0, wScroll - 
